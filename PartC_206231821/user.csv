@@ -1,0 +1,3 @@
+"user_id";"name";"email_address";"password";"address";"phone_number";"zip_code";"has_allergy";"has_medical_approval";"gender";"skin_type";"about"
+1;"Shir";"shir@gmail.com";"123";"Beer Sheva";"0541234567";1234;1;0;"Female";"Normal";"Hi"
+2;"John";"john@hotmail.com";"456";"Tel Aviv";"0501213321";5678;0;1;"Male";"Oil";"Hello :)"

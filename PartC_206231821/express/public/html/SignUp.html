@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/css.css">
+    <script defer src="../js/main.js"></script>
+
+</head>
+<body>
+<div class = "grid-container">
+    <div class="gridNavBar">
+        <ul class="navBar">
+            <li><a href="/">Home</a></li>
+            <li class="dropdown">
+                <a href="/aboutUs" href="javascript:void(0)" class="dropbtn">About us</a>
+                <div class="dropdown-content">
+                    <a href="/ourTeam">Our Team</a>
+                    <a href="/contactUs">Contact Us</a>
+                </div>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/prices">prices</a></li>
+            <li><a href="/checkout">Check out!</a></li>
+            <li><a href="/color">Color of The Day :)</a></li>
+            </li>
+        </ul>
+    </div>
+</div>
+<h1 class="titleForm" > Sign Up </h1><br>
+
+<div class="container">
+    <form name='registration' method="post" action="/register" onsubmit="return validate()"><br>
+        <h4 style="color: red; font-size: small;" id="error"></h4>
+        <br />
+        <h4> All our club members enjoy discounts, special offers and priority in making appointments! </h4><br><br>
+
+        <ul>
+            <label for="phone"> Phone:</label><br>
+            <input type="tel" name="phone" /><br>
+            <label for="passid">Password:</label><br>
+            <input type="password" name="passid" /><br>
+            <label for="username">Name:</label><br>
+            <input type="text" name="username"  /><br>
+            <label for="address">Address:</label><br>
+            <input type="text" name="address"  /><br>
+            <label for="skin">Skin Type:</label><br>
+            <select name="TypeSkin">
+                <option selected="" value="Default">(Please select a Skin)</option>
+                <option value="Normal">Normal</option>
+                <option value="Dry">Dry</option>
+                <option value="Oil">Oil</option>
+                <option value="Sensitive">Sensitive</option>
+                <option value="Combination">Combination</option>
+                required </select><br><br>
+            <label for="zip">ZIP Code:</label><br>
+            <input type="text" name="zip" /><br>
+            <label for="email">Email:</label><br>
+            <input type="text" name="email" size="50" /><br>
+            <label id="gender">Sex:</label><br>
+            <input type="radio" name="gender" value="Male"/><span>Male</span>
+            <input type="radio" name="gender" value="Female"/><span>Female</span><br><br>
+            <label> Allergy:</label><br>
+            <input type="checkbox" name="en" value="en" checked /><span> Yes </span><br>
+            <input type="checkbox" name="nonen" value="noen" /><span> Have a medical certificate  </span> <br><br>
+            <label for="desc">About:</label><br>
+            <textarea name="desc" id="desc"></textarea><br>
+            <input type="submit" name="submit" value="Submit" /><br><br><br>
+        </ul>
+    </form>
+    <script>
+        const errorBox = document.getElementById("error");
+
+        function validate() {
+            const errors = formValidation();
+            if (errors !== "") {
+                errorBox.innerHTML = errors;
+                return false;
+            } else {
+                return true;
+            }
+            // console.log(document.registration.phone.value + "_")
+            // const check = document.registration.phone.value !== ''
+            // console.log(check)
+            // if (!check) {
+            //     errorBox.innerHTML = "Phone number invalid";
+            //     return false;
+            // } else{
+            //     return true;
+            // }
+        }
+    </script>
+</div>
+</body>
+</html>

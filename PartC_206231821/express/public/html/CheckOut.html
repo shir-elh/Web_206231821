@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check out</title>
+    <link rel="stylesheet" href="../css/css.css">
+    <script defer src="../js/main.js"></script>
+
+</head>
+<body class="CheckOut">
+<div class = "grid-container">
+    <div class="gridNavBar">
+        <ul class="navBar">
+            <li><a href="/">Home</a></li>
+            <li class="dropdown">
+                <a href="/aboutUs" href="javascript:void(0)" class="dropbtn">About us</a>
+                <div class="dropdown-content">
+                    <a href="/ourTeam">Our Team</a>
+                    <a href="/contactUs">Contact Us</a>
+                </div>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/prices">prices</a></li>
+            <li><a href="/checkout">Check out!</a></li>
+            <li><a href="/color">Color of The Day :)</a></li>
+            </li>
+        </ul>
+    </div>
+</div>
+<h1 class="titleForm" > Let's make an appointment </h1><br>
+<div class="container">
+
+    <form action="SEND ADDRESS" id="ft-form" method="POST" accept-charset="UTF-8" name='registration' onSubmit="formValidation();">
+        <ul>
+
+            <fieldset>
+                <legend>For person</legend>
+                <label for = "name"> Name <input type="text" name="name" required> </label>
+                <div class="two-cols">
+                    <label for="email"> Email address <input type="email" name="email" required> </label> <br>
+                    <label for="phone"> Phone number </label> <input type="tel" name="phone"> <br>
+                    <label> Color <input type="text" name="color" required> </label><br>
+                    <h5> Dont know which color to choose?  <a href="/color"> Click Here!</a></h5>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Appointment request</legend> <br>
+                <div class="two-cols">
+                    <label> Datum <input type="date" name="Appointment request" required> </label>
+                    <div class="inline">
+                        <label> <input type="hidden" name="Morning desired" value="no" required>
+                            <input type="checkbox" name="Morning desired" value="yes" required>
+                            Morning </label>
+                        <label>
+                            <input type="hidden" name="Afternoon desired" value="no" required>
+                            <input type="checkbox" name="Afternoon desired" value="yes" required>
+                            Afternoon
+                        </label>
+                    </div>
+                </div> <br>
+
+                <p>Confirmation requested by</p>
+                <div class="inline">
+                    <label>
+                        <input type="radio" name="Confirmation requested by" value="email" checked>
+                        Email
+                    </label>
+                    <label>
+                        <input type="radio" name="Confirmation requested by" value="phone">
+                        Phone call
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="btns">
+                <input type="text" name="_gotcha" value="" style="display:none;">
+                <input type="submit" name="submit" value="Submit request" /> <br><br>
+                <h5>As a member, Your appointment Be first!  <a href="/login">Login Here!</a> </h5>
+            </div>
+
+        </ul>
+    </form>
+</div>
+</body>
+</html>
